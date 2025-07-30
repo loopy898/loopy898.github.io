@@ -58,6 +58,8 @@
 <meta property="og:image" content="https://loopy898.github.io/images/36.png">
 <meta property="og:image" content="https://loopy898.github.io/images/37.png">
 <meta property="og:image" content="https://loopy898.github.io/images/46.png">
+<meta property="og:image" content="https://loopy898.github.io/images/68.png">
+<meta property="og:image" content="https://loopy898.github.io/images/69.png">
 <meta property="og:image" content="https://loopy898.github.io/images/39.png">
 <meta property="og:image" content="https://loopy898.github.io/images/38.png">
 <meta property="og:image" content="https://loopy898.github.io/images/40.png">
@@ -87,7 +89,7 @@
 <meta property="og:image" content="https://loopy898.github.io/images/66.png">
 <meta property="og:image" content="https://loopy898.github.io/images/67.png">
 <meta property="article:published_time" content="2025-07-14T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-07-30T14:52:28.498Z">
+<meta property="article:modified_time" content="2025-07-30T16:33:06.254Z">
 <meta property="article:author" content="loopy">
 <meta property="article:tag" content="电子数据取证">
 <meta name="twitter:card" content="summary">
@@ -267,7 +269,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-07-30 22:52:28" itemprop="dateModified" datetime="2025-07-30T22:52:28+08:00">2025-07-30</time>
+      <time title="Modified: 2025-07-31 00:33:06" itemprop="dateModified" datetime="2025-07-31T00:33:06+08:00">2025-07-31</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -298,7 +300,7 @@
 <p>见分区详情</p>
 <p><img src="/images/3.png"></p>
 <p>参考其他wp时，发现也可以将服务器dd镜像导入虚拟机，</p>
-<p>用命令linux基本命令<mark>fdisk -l</mark>，列出所有磁盘分区信息。</p>
+<p>用linux基本命令<mark>fdisk -l</mark>，列出所有磁盘分区信息。</p>
 <p><img src="/images/2.png"></p>
 <p>由图可得LBA是<code>2099200扇区</code>。</p>
 <h4 id="4-检材-1-中网站-“www-kkzjc-com“-对应-Web-服务对外开放的端口是"><a href="#4-检材-1-中网站-“www-kkzjc-com“-对应-Web-服务对外开放的端口是" class="headerlink" title="4.检材 1 中网站 “www.kkzjc.com“ 对应 Web 服务对外开放的端口是"></a>4.检材 1 中网站 “<a target="_blank" rel="noopener" href="http://www.kkzjc.com/">www.kkzjc.com</a>“ 对应 Web 服务对外开放的端口是</h4><p>要分析服务器上运行的web服务，找出对外开放的端口。检查web服务器配置，Nginx 的配置文件通常位于：</p>
@@ -334,13 +336,13 @@
 </ol>
 <h4 id="5-检材-1-所在的服务器共绑定了几个对外开放的域名"><a href="#5-检材-1-所在的服务器共绑定了几个对外开放的域名" class="headerlink" title="5. 检材 1 所在的服务器共绑定了几个对外开放的域名"></a>5. 检材 1 所在的服务器共绑定了几个对外开放的域名</h4><p><code>3</code></p>
 <p>同上图，有三个对外开放的域名。</p>
-<h4 id="6-检材-1-所在服务器的原始IP地址是"><a href="#6-检材-1-所在服务器的原始IP地址是" class="headerlink" title="6. 检材 1 所在服务器的原始IP地址是"></a>6. 检材 1 所在服务器的原始IP地址是</h4><p>从检材二的连接中得到，</p>
+<h4 id="6-检材-1-所在服务器的原始IP地址是"><a href="#6-检材-1-所在服务器的原始IP地址是" class="headerlink" title="6. 检材 1 所在服务器的原始IP地址是"></a>6. 检材 1 所在服务器的原始IP地址是</h4><p>先往后看，之后可以从检材二的连接中得到，</p>
 <p><img src="/images/14.png"></p>
-<p>（后来发现，也可以从docker的日志中找：8091端口是在docker中，别人通过web访问时自己的ip会被记录)</p>
+<p>（看history，发现服务器有 docker，也可以从docker的日志中找：8091端口是在docker中，别人通过web访问时自己的ip会被记录)</p>
 <p><code>192.168.99.3</code></p>
-<h4 id="7-嫌疑人曾远程登录检材-1-所在的服务器，分析并找出其使用的-IP-地址是"><a href="#7-嫌疑人曾远程登录检材-1-所在的服务器，分析并找出其使用的-IP-地址是" class="headerlink" title="7. 嫌疑人曾远程登录检材 1 所在的服务器，分析并找出其使用的 IP 地址是"></a>7. 嫌疑人曾远程登录检材 1 所在的服务器，分析并找出其使用的 IP 地址是</h4><p>❓远程登录：last命令，</p>
+<h4 id="7-嫌疑人曾远程登录检材-1-所在的服务器，分析并找出其使用的-IP-地址是"><a href="#7-嫌疑人曾远程登录检材-1-所在的服务器，分析并找出其使用的-IP-地址是" class="headerlink" title="7. 嫌疑人曾远程登录检材 1 所在的服务器，分析并找出其使用的 IP 地址是"></a>7. 嫌疑人曾远程登录检材 1 所在的服务器，分析并找出其使用的 IP 地址是</h4><p>远程登录：last命令，</p>
 <p><img src="/images/13.png"></p>
-<p>案发时间只有一个ip反复登录过。</p>
+<p>这两个ip都试一下，对的可以解压检材2.</p>
 <p><code>192.168.99.222</code></p>
 <h4 id="8-反向代理-“www-kkzjc-com“-转发的后台-IP-地址"><a href="#8-反向代理-“www-kkzjc-com“-转发的后台-IP-地址" class="headerlink" title="8. 反向代理 “www.kkzjc.com“ 转发的后台 IP 地址"></a>8. 反向代理 “<a target="_blank" rel="noopener" href="http://www.kkzjc.com/">www.kkzjc.com</a>“ 转发的后台 IP 地址</h4><p><img src="/images/8.png" alt="8"></p>
 <p>打开 “<a target="_blank" rel="noopener" href="http://www.kkzjc.com/">www.kkzjc.com</a>“ 文件，如上图，该网站反向代理，将请求转发到127.0.0.1:8091，就是本机的8091端口，（且三个网站都是将请求转发到8091端口上）</p>
@@ -351,17 +353,18 @@
 <p><code>dockers ps</code>：检查正在运行的容器，发现宿主机 8091 端口映射到容器内部的 80 端口。</p>
 <p><img src="/images/11.png" alt="11"></p>
 <p><span style="color:blue">进入容器交互终端：docker exec -it 08 &#x2F;bin&#x2F;bash</span></p>
-<p>在docker的容器里面，发现它里面也有nginx，依然是主配置文件里include一个路径，打开这个路径&#x2F;etc&#x2F;nginx&#x2F;conf.d，里面只有hl.conf，查看：more hl.conf。</p>
+<p>nginx主配置文件里include一个路径，打开这个路径&#x2F;etc&#x2F;nginx&#x2F;conf.d，里面只有hl.conf，查看：more hl.conf。</p>
 <p><img src="/images/12.png" alt="12"></p>
-<p>结果如图，找到了最终转发的ip为192.168.1.176。即docker的80端口再作为被监听的部分，将请求转发到192.168.1.176的80端口上。</p>
-<p>感觉有点复杂，像二级跳板一样，，，最开始我写的就是本机（127.0.0.1:8091）</p>
+<p>结果如图，即docker的80端口再作为被监听的部分，将请求最终转发到后台ip：192.168.1.176的80端口上。</p>
 <p><code>192.168.1.176</code></p>
 <h4 id="9-题目-7-中的-IP-地址在检材-1-中出现的次数"><a href="#9-题目-7-中的-IP-地址在检材-1-中出现的次数" class="headerlink" title="9. 题目 7 中的 IP 地址在检材 1 中出现的次数"></a>9. 题目 7 中的 IP 地址在检材 1 中出现的次数</h4><p>❓15</p>
+<p>在火眼中搜索的，，不知道怎么看</p>
 <h3 id="检材二"><a href="#检材二" class="headerlink" title="检材二."></a>检材二.</h3><p>pc机是嫌疑人的机器，本机痕迹不多，分析其虚拟机，将其导出并移除加密，放到火眼仿真中。在VM中运行Docker（云服务器的常见做法）。</p>
 <h4 id="10-检材-2-的原始磁盘-SHA256-值"><a href="#10-检材-2-的原始磁盘-SHA256-值" class="headerlink" title="10. 检材 2 的原始磁盘 SHA256 值"></a>10. 检材 2 的原始磁盘 SHA256 值</h4><p><code>2D926D5E1CFE27553AE59B6152E038560D64E7837ECCAD30F2FBAD5052FABF37</code></p>
 <h4 id="11-检材-2-所在计算机的-OS-内部版本号"><a href="#11-检材-2-所在计算机的-OS-内部版本号" class="headerlink" title="11. 检材 2 所在计算机的 OS 内部版本号"></a>11. 检材 2 所在计算机的 OS 内部版本号</h4><p><code>18363.1082</code></p>
 <h4 id="12-检材-2-计算机最后一次正常关机时间"><a href="#12-检材-2-计算机最后一次正常关机时间" class="headerlink" title="12. 检材 2 计算机最后一次正常关机时间"></a>12. 检材 2 计算机最后一次正常关机时间</h4><p><code>2020-09-22 13:15:34</code></p>
 <h4 id="13-检材-2-中-VMware-的安装时间"><a href="#13-检材-2-中-VMware-的安装时间" class="headerlink" title="13. 检材 2 中 VMware 的安装时间"></a>13. 检材 2 中 VMware 的安装时间</h4><p><code>2020-09-18 17:57:13</code></p>
+<p>11-13题火眼中可以直接找到。</p>
 <h4 id="14-检材-2-中，VMware-exe-共计启动过几次"><a href="#14-检材-2-中，VMware-exe-共计启动过几次" class="headerlink" title="14. 检材 2 中，VMware.exe 共计启动过几次"></a>14. 检材 2 中，VMware.exe 共计启动过几次</h4><p>❓</p>
 <p>在应用程序执行记录中，没有直接找到vmware.exe，但是能看到.vmui的执行次数是8次。</p>
 <p><code>.vmui</code> 的作用：此文件是虚拟机界面配置（如窗口布局、工具栏设置），仅当用户通过 <code>vmware.exe</code> 打开特定虚拟机时被加载。</p>
@@ -374,15 +377,17 @@
 <li>查找格式为<code>VMWARE.EXE-&lt;哈希值&gt;.pf</code>的文件(如<code>VMWARE.EXE-01234567.pf</code>)</li>
 </ul>
 <p>Prefetch 文件名的哈希值（<code>XXXXXXXX</code>部分）是通过<strong>程序完整路径</strong>计算得出的</p>
-<p>文件-c-windows-prefetch,只看到一个VMWARE.EXE-C567918C.pf记录，说明它只有一个路径。分析这个文件？？</p>
+<p>文件-c-windows-prefetch,只看到一个VMWARE.EXE-C567918C.pf记录，说明它只有一个路径。怎么分析这个文件？</p>
 <p><img src="/images/6.png"></p>
 <p><code>8</code></p>
-<h4 id="15-嫌疑人通过-Web-方式，从检材-2-访问检材-1-的网站，连接的目标端口"><a href="#15-嫌疑人通过-Web-方式，从检材-2-访问检材-1-的网站，连接的目标端口" class="headerlink" title="15. 嫌疑人通过 Web 方式，从检材 2 访问检材 1 的网站，连接的目标端口"></a>15. 嫌疑人通过 Web 方式，从检材 2 访问检材 1 的网站，连接的目标端口</h4><p><code>8091</code></p>
-<h4 id="16-接-15-题，该端口上运行的进程的程序名称"><a href="#16-接-15-题，该端口上运行的进程的程序名称" class="headerlink" title="16. 接 15 题，该端口上运行的进程的程序名称"></a>16. 接 15 题，该端口上运行的进程的程序名称</h4><p><code>docker-proxy</code>，见第8题图。</p>
+<h4 id="15-嫌疑人通过-Web-方式，从检材-2-访问检材-1-的网站，连接的目标端口"><a href="#15-嫌疑人通过-Web-方式，从检材-2-访问检材-1-的网站，连接的目标端口" class="headerlink" title="15. 嫌疑人通过 Web 方式，从检材 2 访问检材 1 的网站，连接的目标端口"></a>15. 嫌疑人通过 Web 方式，从检材 2 访问检材 1 的网站，连接的目标端口</h4><p>见第6题图，通过web访问的信息可以在chrome浏览器记录中看到，访问的是8091端口。</p>
+<p><code>8091</code></p>
+<h4 id="16-接-15-题，该端口上运行的进程的程序名称"><a href="#16-接-15-题，该端口上运行的进程的程序名称" class="headerlink" title="16. 接 15 题，该端口上运行的进程的程序名称"></a>16. 接 15 题，该端口上运行的进程的程序名称</h4><p>8091端口上运行了<code>docker-proxy</code>，见第8题图。</p>
+<p>或者在检材一中用：netstat -anp | grep 8091，（-p 获取进程名、进程号以及用户 ID）</p>
 <h4 id="17-嫌疑人从检材-2-上访问该网站，所使用的域名"><a href="#17-嫌疑人从检材-2-上访问该网站，所使用的域名" class="headerlink" title="17. 嫌疑人从检材 2 上访问该网站，所使用的域名"></a>17. 嫌疑人从检材 2 上访问该网站，所使用的域名</h4><p>见第6题图，chrome浏览器中记录了通过web访问时的域名。</p>
 <p>或：搜一下关键词8091</p>
 <p><code>www.sdhj.com</code></p>
-<h4 id="18-检材-2-中嫌疑人使用的微信-ID"><a href="#18-检材-2-中嫌疑人使用的微信-ID" class="headerlink" title="18. 检材 2 中嫌疑人使用的微信 ID"></a>18. 检材 2 中嫌疑人使用的微信 ID</h4><p>检材二c盘中有手机备份，导出-添加为新检材。（检材2在虚拟机中仿真更容易看到）</p>
+<h4 id="18-检材-2-中嫌疑人使用的微信-ID"><a href="#18-检材-2-中嫌疑人使用的微信-ID" class="headerlink" title="18. 检材 2 中嫌疑人使用的微信 ID"></a>18. 检材 2 中嫌疑人使用的微信 ID</h4><p>检材二c盘中有<u>手机备份</u>，导出-添加为新检材。（检材2在虚拟机中仿真更容易看到）</p>
 <p><code>sstt119999</code></p>
 <h4 id="19-分析检材-2，嫌疑人为推广其网站，与广告位供应商沟通时使用的通联工具的名称为"><a href="#19-分析检材-2，嫌疑人为推广其网站，与广告位供应商沟通时使用的通联工具的名称为" class="headerlink" title="19. 分析检材 2，嫌疑人为推广其网站，与广告位供应商沟通时使用的通联工具的名称为"></a>19. 分析检材 2，嫌疑人为推广其网站，与广告位供应商沟通时使用的通联工具的名称为</h4><p><code>Telegram</code></p>
 <h4 id="20-分析检材-2，嫌疑人与供应商交易使用的虚拟货币名称"><a href="#20-分析检材-2，嫌疑人与供应商交易使用的虚拟货币名称" class="headerlink" title="20. 分析检材 2，嫌疑人与供应商交易使用的虚拟货币名称"></a>20. 分析检材 2，嫌疑人与供应商交易使用的虚拟货币名称</h4><p><code>dogecoin</code></p>
@@ -391,7 +396,7 @@
 <h4 id="22-上述交易的交易时间"><a href="#22-上述交易的交易时间" class="headerlink" title="22. 上述交易的交易时间"></a>22. 上述交易的交易时间</h4><p>用上面的收款地址去区块链浏览器搜索，页面会显示该地址的所有转入&#x2F;转出交易</p>
 <p><img src="/images/16.png"></p>
 <p>❓2020-9-20 04:19:46</p>
-<p>（为什么我查的和答案不一样，答案是十二点多</p>
+<p>（为什么我查的和答案不一样</p>
 <h4 id="23-上述交易中支付货币的数量"><a href="#23-上述交易中支付货币的数量" class="headerlink" title="23. 上述交易中支付货币的数量"></a>23. 上述交易中支付货币的数量</h4><p><code>4000</code></p>
 <p>见上图</p>
 <p>（我最开始想的是1800，三个月定金。以实际到账为准</p>
@@ -446,8 +451,11 @@
 <p>也可以找到IE浏览器，访问历史记录中的localhost&#x2F;dl，看到登陆界面–f12查看源码。</p>
 <p><img src="/images/37.png"></p>
 <p><img src="/images/46.png"></p>
-<p>还可以找出虚拟机ip，在自己本机浏览器访问对应的网站名分析登陆页面。</p>
+<p>还可以找出虚拟机ip，（改net模式）在自己本机浏览器访问对应的网站名分析登陆页面。</p>
 <p><code>OvO</code></p>
+<p>❓从这里我又做了一次，这次检材3的ip是192.168.1.176，也就是网站转发的后台（见第8题），我感觉这个ip才是合理的。也能和检材4连接&#x2F;在自己的浏览器上也能访问。为什么两次ip会不一样？</p>
+<p><img src="/images/68.png"></p>
+<p><img src="/images/69.png"></p>
 <h4 id="37-检材-3-网站代码中，网站登录过程中调用的动态扩展库名称"><a href="#37-检材-3-网站代码中，网站登录过程中调用的动态扩展库名称" class="headerlink" title="37. 检材 3 网站代码中，网站登录过程中调用的动态扩展库名称"></a>37. 检材 3 网站代码中，网站登录过程中调用的动态扩展库名称</h4><p>引用了App_Web_dllogin.aspx配置文件（36题图），在bin中找，可得文件的完整名称。<code>App_Web_dllogin.aspx.7d7c2f33.dll</code></p>
 <h4 id="38-检材-3-网站登录时后台对接收到的明文密码采用的加密算法"><a href="#38-检材-3-网站登录时后台对接收到的明文密码采用的加密算法" class="headerlink" title="38. 检材 3 网站登录时后台对接收到的明文密码采用的加密算法"></a>38. 检材 3 网站登录时后台对接收到的明文密码采用的加密算法</h4><p><img src="/images/39.png"></p>
 <p>直接打开是乱码，需要用的dnspy对dll文件进行逆向。</p>
@@ -525,6 +533,7 @@
 <h4 id="50-接上一题，该代理商户的最后一次登陆时间"><a href="#50-接上一题，该代理商户的最后一次登陆时间" class="headerlink" title="50. 接上一题，该代理商户的最后一次登陆时间"></a>50. 接上一题，该代理商户的最后一次登陆时间</h4><p><img src="/images/66.png"></p>
 <p><img src="/images/67.png"></p>
 <p>❓为什么不是<code>2016/9/6 0:43:07</code></p>
+<p>检材1：受害人访问钓鱼网站“<a target="_blank" rel="noopener" href="http://www.kkzjc.com”是服务器监听的32000端口,访问请求会通过服务器原始地址的8091端口转发到/">www.kkzjc.com”是服务器监听的32000端口，访问请求会通过服务器原始地址的8091端口转发到</a> nginx 服务器（docker，80端口），并在 nginx 日志中留下记录。并且nginx 作为 docker 容器，与宿主机服务器之间存在着端口映射的关系 80&#x2F;tcp -&gt; 8091。进入docker交互式终端， 可以看到在 nginx 的配置文件目录下编辑 hl.conf 这个文件，里面就有 nginx 服务器的代理转发信息，即转发到后台ip（192.168.1.176）</p>
 
     </div>
 
