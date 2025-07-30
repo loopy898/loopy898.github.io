@@ -87,7 +87,7 @@
 <meta property="og:image" content="https://loopy898.github.io/images/66.png">
 <meta property="og:image" content="https://loopy898.github.io/images/67.png">
 <meta property="article:published_time" content="2025-07-14T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-07-30T14:49:15.677Z">
+<meta property="article:modified_time" content="2025-07-30T14:52:28.498Z">
 <meta property="article:author" content="loopy">
 <meta property="article:tag" content="电子数据取证">
 <meta name="twitter:card" content="summary">
@@ -267,7 +267,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-07-30 22:49:15" itemprop="dateModified" datetime="2025-07-30T22:49:15+08:00">2025-07-30</time>
+      <time title="Modified: 2025-07-30 22:52:28" itemprop="dateModified" datetime="2025-07-30T22:52:28+08:00">2025-07-30</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -424,7 +424,7 @@
 <h4 id="29-检材-2-中，嫌疑人使用上述工具连接服务器的登录密码"><a href="#29-检材-2-中，嫌疑人使用上述工具连接服务器的登录密码" class="headerlink" title="29. 检材 2 中，嫌疑人使用上述工具连接服务器的登录密码"></a>29. 检材 2 中，嫌疑人使用上述工具连接服务器的登录密码</h4><p><img src="/images/29.png"></p>
 <p>第6题，服务器ip为192.168.99.3，说明这条记录是嫌疑人用虚拟机连接到服务器。</p>
 <p><code>qwer1234!@#$</code></p>
-<h3 id="检材三"><a href="#检材三" class="headerlink" title="检材三."></a>检材三.</h3><p>该检材是一个 Windows Server 服务器，上面部署了一个 IIS 网站，</p>
+<h3 id="检材三"><a href="#检材三" class="headerlink" title="检材三."></a>检材三.</h3><p>该检材是一个 Windows Server 服务器，上面部署了一个 IIS 网站。</p>
 <h4 id="30-检材-3-的原始磁盘-SHA256-值"><a href="#30-检材-3-的原始磁盘-SHA256-值" class="headerlink" title="30. 检材 3 的原始磁盘 SHA256 值"></a>30. 检材 3 的原始磁盘 SHA256 值</h4><p><code>FF593FCCB3770B8845A3334631F8E80807638EE722C5AA7B34E877589857C3BA</code></p>
 <h4 id="31-检材-3-所在计算机的操作系统版本"><a href="#31-检材-3-所在计算机的操作系统版本" class="headerlink" title="31. 检材 3 所在计算机的操作系统版本"></a>31. 检材 3 所在计算机的操作系统版本</h4><p><code>Windows Server 2008 HPC Edition</code></p>
 <h4 id="32-检材-3-中，部署的网站名称"><a href="#32-检材-3-中，部署的网站名称" class="headerlink" title="32. 检材 3 中，部署的网站名称"></a>32. 检材 3 中，部署的网站名称</h4><p><code>card</code></p>
@@ -464,7 +464,7 @@
 <p><code>192.168.1.174</code></p>
 <h4 id="40-检材-3-中，网站连接数据库使用的密码"><a href="#40-检材-3-中，网站连接数据库使用的密码" class="headerlink" title="40. 检材 3 中，网站连接数据库使用的密码"></a>40. 检材 3 中，网站连接数据库使用的密码</h4><p><code>c4f2737e88</code></p>
 <h4 id="41-检材-3-中，网站连接数据库服务器的端口"><a href="#41-检材-3-中，网站连接数据库服务器的端口" class="headerlink" title="41. 检材 3 中，网站连接数据库服务器的端口"></a>41. 检材 3 中，网站连接数据库服务器的端口</h4><p><code>1433</code></p>
-<h3 id="检材四"><a href="#检材四" class="headerlink" title="检材四."></a>检材四.</h3><p>数据库服务器</p>
+<h3 id="检材四"><a href="#检材四" class="headerlink" title="检材四."></a>检材四.</h3><p>虚拟机docker中部署了数据库服务器。</p>
 <h4 id="42-检材-4-的原始磁盘-SHA256-值"><a href="#42-检材-4-的原始磁盘-SHA256-值" class="headerlink" title="42. 检材 4 的原始磁盘 SHA256 值"></a>42. 检材 4 的原始磁盘 SHA256 值</h4><p><code>E5E548CCAECD02608A0E053A5C7DCDBFBDD4BE5B0E743EB9DC8E318C369BEBC8</code></p>
 <h4 id="43-重构该网站，分析嫌疑用户的推广链接中参数里包含的-ID"><a href="#43-重构该网站，分析嫌疑用户的推广链接中参数里包含的-ID" class="headerlink" title="43. 重构该网站，分析嫌疑用户的推广链接中参数里包含的 ID"></a>43. 重构该网站，分析嫌疑用户的推广链接中参数里包含的 ID</h4><p>仿真后查看history，打开docker，发现没有正在运行中的容器，但有一个运行过的容器，端口是1433，说明数据库在 docker 中。</p>
 <p><img src="/images/42.png"></p>
@@ -501,7 +501,7 @@
 <p><img src="/images/58.png"></p>
 <p><code>abe6d2ee630379c3</code></p>
 <h4 id="44-重构该网站，该网站后台的代理用户数量"><a href="#44-重构该网站，该网站后台的代理用户数量" class="headerlink" title="44. 重构该网站，该网站后台的代理用户数量"></a>44. 重构该网站，该网站后台的代理用户数量</h4><p>共三页，数一下。</p>
-<p>26 </p>
+<p><code>26</code> </p>
 <h4 id="45-重构该网站，该网站注册用户有过几个代理（包含删除的数据）"><a href="#45-重构该网站，该网站注册用户有过几个代理（包含删除的数据）" class="headerlink" title="45. 重构该网站，该网站注册用户有过几个代理（包含删除的数据）"></a>45. 重构该网站，该网站注册用户有过几个代理（包含删除的数据）</h4><p>网站页面上不显示删除的，在数据库里看，用户中有6个被删除的用户。</p>
 <p><img src="/images/59.png"></p>
 <p><code>32</code></p>
@@ -524,7 +524,7 @@
 <p><code>d0fdd7a9a010d37e</code></p>
 <h4 id="50-接上一题，该代理商户的最后一次登陆时间"><a href="#50-接上一题，该代理商户的最后一次登陆时间" class="headerlink" title="50. 接上一题，该代理商户的最后一次登陆时间"></a>50. 接上一题，该代理商户的最后一次登陆时间</h4><p><img src="/images/66.png"></p>
 <p><img src="/images/67.png"></p>
-<p>❓为什么不是<code>2016/9/6 0:43:07</code>，</p>
+<p>❓为什么不是<code>2016/9/6 0:43:07</code></p>
 
     </div>
 
