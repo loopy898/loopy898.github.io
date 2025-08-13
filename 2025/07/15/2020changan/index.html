@@ -36,9 +36,13 @@
 <meta property="og:image" content="https://loopy898.github.io/images/15.png">
 <meta property="og:image" content="https://loopy898.github.io/images/11.png">
 <meta property="og:image" content="https://loopy898.github.io/images/12.png">
+<meta property="og:image" content="https://loopy898.github.io/images/72.png">
+<meta property="og:image" content="https://loopy898.github.io/images/73.png">
+<meta property="og:image" content="https://loopy898.github.io/images/74.png">
 <meta property="og:image" content="https://loopy898.github.io/images/4.png">
-<meta property="og:image" content="https://loopy898.github.io/images/6.png">
 <meta property="og:image" content="https://loopy898.github.io/images/16.png">
+<meta property="og:image" content="https://loopy898.github.io/images/70.png">
+<meta property="og:image" content="https://loopy898.github.io/images/71.png">
 <meta property="og:image" content="https://loopy898.github.io/images/17.png">
 <meta property="og:image" content="https://loopy898.github.io/images/21.png">
 <meta property="og:image" content="https://loopy898.github.io/images/18.png">
@@ -87,9 +91,8 @@
 <meta property="og:image" content="https://loopy898.github.io/images/64.png">
 <meta property="og:image" content="https://loopy898.github.io/images/65.png">
 <meta property="og:image" content="https://loopy898.github.io/images/66.png">
-<meta property="og:image" content="https://loopy898.github.io/images/67.png">
 <meta property="article:published_time" content="2025-07-14T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-07-30T16:33:06.254Z">
+<meta property="article:modified_time" content="2025-08-09T06:37:15.144Z">
 <meta property="article:author" content="loopy">
 <meta property="article:tag" content="电子数据取证">
 <meta name="twitter:card" content="summary">
@@ -197,7 +200,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -269,7 +272,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-07-31 00:33:06" itemprop="dateModified" datetime="2025-07-31T00:33:06+08:00">2025-07-31</time>
+      <time title="Modified: 2025-08-09 14:37:15" itemprop="dateModified" datetime="2025-08-09T14:37:15+08:00">2025-08-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -357,28 +360,30 @@
 <p><img src="/images/12.png" alt="12"></p>
 <p>结果如图，即docker的80端口再作为被监听的部分，将请求最终转发到后台ip：192.168.1.176的80端口上。</p>
 <p><code>192.168.1.176</code></p>
-<h4 id="9-题目-7-中的-IP-地址在检材-1-中出现的次数"><a href="#9-题目-7-中的-IP-地址在检材-1-中出现的次数" class="headerlink" title="9. 题目 7 中的 IP 地址在检材 1 中出现的次数"></a>9. 题目 7 中的 IP 地址在检材 1 中出现的次数</h4><p>❓15</p>
-<p>在火眼中搜索的，，不知道怎么看</p>
+<h4 id="9-题目-7-中的-IP-地址在检材-1-中出现的次数"><a href="#9-题目-7-中的-IP-地址在检材-1-中出现的次数" class="headerlink" title="9. 题目 7 中的 IP 地址在检材 1 中出现的次数"></a>9. 题目 7 中的 IP 地址在检材 1 中出现的次数</h4><p><code>18</code></p>
+<p>本机的ngix没有用，用的是docker中的ngix服务器。</p>
+<p>所以远程登陆的ip信息会被记录在docker的日志中，</p>
+<p>在 Docker 中查看容器日志：</p>
+<p><span style="color:blue">docker logs &lt;容器名称或ID&gt;</span></p>
+<p>翻页了不好查看，可限制输出行数然后数；</p>
+<p>也可以筛选找到ip出现的次数。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入：docker logs &lt;容器名或ID&gt; | grep -o &quot;192.168.99.222&quot; | wc -l</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/72.png"></p>
+<p><img src="/images/73.png"></p>
+<p>在docker的log日志文件中看，一共出现18次。</p>
+<p>在火眼-文件中也能找到docker的日志，可直接数或导出统计</p>
+<p><img src="/images/74.png"></p>
 <h3 id="检材二"><a href="#检材二" class="headerlink" title="检材二."></a>检材二.</h3><p>pc机是嫌疑人的机器，本机痕迹不多，分析其虚拟机，将其导出并移除加密，放到火眼仿真中。在VM中运行Docker（云服务器的常见做法）。</p>
 <h4 id="10-检材-2-的原始磁盘-SHA256-值"><a href="#10-检材-2-的原始磁盘-SHA256-值" class="headerlink" title="10. 检材 2 的原始磁盘 SHA256 值"></a>10. 检材 2 的原始磁盘 SHA256 值</h4><p><code>2D926D5E1CFE27553AE59B6152E038560D64E7837ECCAD30F2FBAD5052FABF37</code></p>
 <h4 id="11-检材-2-所在计算机的-OS-内部版本号"><a href="#11-检材-2-所在计算机的-OS-内部版本号" class="headerlink" title="11. 检材 2 所在计算机的 OS 内部版本号"></a>11. 检材 2 所在计算机的 OS 内部版本号</h4><p><code>18363.1082</code></p>
 <h4 id="12-检材-2-计算机最后一次正常关机时间"><a href="#12-检材-2-计算机最后一次正常关机时间" class="headerlink" title="12. 检材 2 计算机最后一次正常关机时间"></a>12. 检材 2 计算机最后一次正常关机时间</h4><p><code>2020-09-22 13:15:34</code></p>
 <h4 id="13-检材-2-中-VMware-的安装时间"><a href="#13-检材-2-中-VMware-的安装时间" class="headerlink" title="13. 检材 2 中 VMware 的安装时间"></a>13. 检材 2 中 VMware 的安装时间</h4><p><code>2020-09-18 17:57:13</code></p>
 <p>11-13题火眼中可以直接找到。</p>
-<h4 id="14-检材-2-中，VMware-exe-共计启动过几次"><a href="#14-检材-2-中，VMware-exe-共计启动过几次" class="headerlink" title="14. 检材 2 中，VMware.exe 共计启动过几次"></a>14. 检材 2 中，VMware.exe 共计启动过几次</h4><p>❓</p>
-<p>在应用程序执行记录中，没有直接找到vmware.exe，但是能看到.vmui的执行次数是8次。</p>
+<h4 id="14-检材-2-中，VMware-exe-共计启动过几次"><a href="#14-检材-2-中，VMware-exe-共计启动过几次" class="headerlink" title="14. 检材 2 中，VMware.exe 共计启动过几次"></a>14. 检材 2 中，VMware.exe 共计启动过几次</h4><p>在应用程序执行记录中，没有直接找到vmware.exe，但是能看到.vmui的执行次数是8次。</p>
 <p><code>.vmui</code> 的作用：此文件是虚拟机界面配置（如窗口布局、工具栏设置），仅当用户通过 <code>vmware.exe</code> 打开特定虚拟机时被加载。</p>
 <p>所以我觉得vmware.exe执行次数也是8）</p>
 <p><img src="/images/4.png"></p>
-<p><mark>查找prefetch记录</mark>：无论通过快捷方式、开始菜单、命令行还是其他方式启动<code>vmware.exe</code>，只要进程真正执行，Windows必定会在Prefetch中生成&#x2F;更新记录。</p>
-<p><strong>Prefetch文件</strong>：</p>
-<ul>
-<li>路径：<code>C:\Windows\Prefetch\</code></li>
-<li>查找格式为<code>VMWARE.EXE-&lt;哈希值&gt;.pf</code>的文件(如<code>VMWARE.EXE-01234567.pf</code>)</li>
-</ul>
-<p>Prefetch 文件名的哈希值（<code>XXXXXXXX</code>部分）是通过<strong>程序完整路径</strong>计算得出的</p>
-<p>文件-c-windows-prefetch,只看到一个VMWARE.EXE-C567918C.pf记录，说明它只有一个路径。怎么分析这个文件？</p>
-<p><img src="/images/6.png"></p>
 <p><code>8</code></p>
 <h4 id="15-嫌疑人通过-Web-方式，从检材-2-访问检材-1-的网站，连接的目标端口"><a href="#15-嫌疑人通过-Web-方式，从检材-2-访问检材-1-的网站，连接的目标端口" class="headerlink" title="15. 嫌疑人通过 Web 方式，从检材 2 访问检材 1 的网站，连接的目标端口"></a>15. 嫌疑人通过 Web 方式，从检材 2 访问检材 1 的网站，连接的目标端口</h4><p>见第6题图，通过web访问的信息可以在chrome浏览器记录中看到，访问的是8091端口。</p>
 <p><code>8091</code></p>
@@ -395,8 +400,10 @@
 <p>在聊天记录中能直接看到</p>
 <h4 id="22-上述交易的交易时间"><a href="#22-上述交易的交易时间" class="headerlink" title="22. 上述交易的交易时间"></a>22. 上述交易的交易时间</h4><p>用上面的收款地址去区块链浏览器搜索，页面会显示该地址的所有转入&#x2F;转出交易</p>
 <p><img src="/images/16.png"></p>
-<p>❓2020-9-20 04:19:46</p>
-<p>（为什么我查的和答案不一样</p>
+<p>2020-9-20 04:19:46</p>
+<p>（为什么我查的和答案不一样，哦原来是时区不同</p>
+<p><img src="/images/70.png">好了，这次是对的。</p>
+<p><img src="/images/71.png"></p>
 <h4 id="23-上述交易中支付货币的数量"><a href="#23-上述交易中支付货币的数量" class="headerlink" title="23. 上述交易中支付货币的数量"></a>23. 上述交易中支付货币的数量</h4><p><code>4000</code></p>
 <p>见上图</p>
 <p>（我最开始想的是1800，三个月定金。以实际到账为准</p>
@@ -453,7 +460,6 @@
 <p><img src="/images/46.png"></p>
 <p>还可以找出虚拟机ip，（改net模式）在自己本机浏览器访问对应的网站名分析登陆页面。</p>
 <p><code>OvO</code></p>
-<p>❓从这里我又做了一次，这次检材3的ip是192.168.1.176，也就是网站转发的后台（见第8题），我感觉这个ip才是合理的。也能和检材4连接&#x2F;在自己的浏览器上也能访问。为什么两次ip会不一样？</p>
 <p><img src="/images/68.png"></p>
 <p><img src="/images/69.png"></p>
 <h4 id="37-检材-3-网站代码中，网站登录过程中调用的动态扩展库名称"><a href="#37-检材-3-网站代码中，网站登录过程中调用的动态扩展库名称" class="headerlink" title="37. 检材 3 网站代码中，网站登录过程中调用的动态扩展库名称"></a>37. 检材 3 网站代码中，网站登录过程中调用的动态扩展库名称</h4><p>引用了App_Web_dllogin.aspx配置文件（36题图），在bin中找，可得文件的完整名称。<code>App_Web_dllogin.aspx.7d7c2f33.dll</code></p>
@@ -531,8 +537,8 @@
 <p>网站管理员可以往其他网站中植入广告。</p>
 <p><code>d0fdd7a9a010d37e</code></p>
 <h4 id="50-接上一题，该代理商户的最后一次登陆时间"><a href="#50-接上一题，该代理商户的最后一次登陆时间" class="headerlink" title="50. 接上一题，该代理商户的最后一次登陆时间"></a>50. 接上一题，该代理商户的最后一次登陆时间</h4><p><img src="/images/66.png"></p>
-<p><img src="/images/67.png"></p>
-<p>❓为什么不是<code>2016/9/6 0:43:07</code></p>
+<p>查看日志得到最后登录时间：</p>
+<p><code>2016/9/6 0:43:07</code></p>
 <p>检材1：受害人访问钓鱼网站“<a target="_blank" rel="noopener" href="http://www.kkzjc.com”是服务器监听的32000端口,访问请求会通过服务器原始地址的8091端口转发到/">www.kkzjc.com”是服务器监听的32000端口，访问请求会通过服务器原始地址的8091端口转发到</a> nginx 服务器（docker，80端口），并在 nginx 日志中留下记录。并且nginx 作为 docker 容器，与宿主机服务器之间存在着端口映射的关系 80&#x2F;tcp -&gt; 8091。进入docker交互式终端， 可以看到在 nginx 的配置文件目录下编辑 hl.conf 这个文件，里面就有 nginx 服务器的代理转发信息，即转发到后台ip（192.168.1.176）</p>
 
     </div>
@@ -548,6 +554,15 @@
 
         
 
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/08/12/2022meiya/" rel="next" title="">
+                   <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
     </footer>
   </article>
 </div>
